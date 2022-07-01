@@ -1,18 +1,20 @@
 import React from 'react'
-
+import Menu from './Menu'
 const Base = (
   // dereferencing the props 
-  { title , description , className , children }
+  { title , description , className = "text-white text-center", children }
 ) => {
   return (
     <div>
-      <div className="container-fluid">
-          <div className="jumbotron bg-dark text-white text-center">
+      <Menu/>
+
+      <div className="container-fluid p-0 ">
+          <div className="jumbotron py-3 mb-3 bg-secondary text-white text-center">
             <h2 className='display-4'>{title}</h2>
             <p className='lead'>{description} </p>
           </div>
 
-          <div className={className}>
+          <div className={className} >
             {children}
           </div>
 

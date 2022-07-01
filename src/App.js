@@ -1,19 +1,19 @@
 import React from 'react';
-import {Routes , Route} from "react-router-dom"
-import Base from './core/Base';
+import {Switch , Route} from "react-router-dom"
 import Home from './core/Home';
 import NotFound from './core/NotFound';
 import './styles.css';
+import Signup from './user/Signup';
 
 function App() {
   return (
     // defining all routes
-    <Routes>
-      <Route path='/' element = {<Home/>}/>
-      <Route path='/signin' element = {<Home/>}/>
-      <Route path='/signup' element = {<Home/>}/>
-      <Route path = "*" element = {<NotFound/>}/>
-    </Routes>
+    <Switch>
+      <Route path='/' exact component={Home}/>
+      <Route path='/signin' exact component={Home}/>
+      <Route path='/signup' exact component={Signup}/>
+      <Route path = "*" exact component={NotFound}/>
+    </Switch>
   );
 }
 
