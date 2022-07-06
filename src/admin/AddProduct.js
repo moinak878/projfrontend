@@ -60,11 +60,11 @@ const AddProduct = () => {
       } else {
         setValues({
           ...values,
-          name: "",
-          description: "",
-          price: "",
+          name: "Tshirt",
+          description: "comfy",
+          price: "100",
           photo: "",
-          stock: "",
+          stock: "5",
           loading: false,
           createdProduct: data.name
         });
